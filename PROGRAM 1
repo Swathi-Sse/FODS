@@ -1,0 +1,10 @@
+item_prices=[2.5,1.0,3.0,5.0]
+quantities=[3,2,1,4]
+discount_rate=10
+tax_rate=8
+total_cost=sum(price*quantity for price,quantity in zip(item_prices,quantities))
+discounted_total_cost=total_cost-(discount_rate/100)*total_cost
+final_total_cost=discounted_total_cost+(tax_rate/100)*discounted_total_cost
+print(f"Total Cost:${final_total_cost:.2f}")
+
+
